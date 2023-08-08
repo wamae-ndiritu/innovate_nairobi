@@ -1,13 +1,11 @@
 import React from "react";
 import { servicesData } from "../data/services";
+import Title from "./Title";
 
 const Services = () => {
   return (
     <div className="container mt-5">
-      <div className="sub-title">
-        <h4 className="h4 text-center">Get Emergency Support Services!</h4>
-        <div className="hr"></div>
-      </div>
+      <Title>Get Emergency Support Services!</Title>
       <div className="row mt-3">
         {servicesData.map((service) => {
           const { id, title, image, desc } = service;
