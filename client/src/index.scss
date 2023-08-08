@@ -1,3 +1,25 @@
+.sub-title{
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    .h4{
+        text-transform: uppercase;
+        font-size: 18px;
+    }
+
+    .hr{
+        height: 3px;
+        width: 150px;
+        background-color: red;
+        border-radius: 7px;
+        position: absolute;
+        bottom: 0;
+        transform: translateX(-30%);
+    }
+}
+
+
 .hero-wrapper{
     position: relative;
 
@@ -94,4 +116,41 @@
             }
         }
     }
+}
+
+// Services Section
+.service-card{
+
+    .card{
+        padding: 10px;
+        cursor: pointer;
+
+        .service-img{
+            display: flex;
+            justify-content: center;
+            img{
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+        }
+
+        .h5{
+            text-align: center;
+            margin: 5px;
+            padding: 0;
+        }
+
+        p{
+            text-align: center;
+            padding: 0;
+            font-size: 16px;
+        }
+
+        &:hover{
+            transform: scale(1.05);
+        }
+    }
+
 }
