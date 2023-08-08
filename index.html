@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nairobi EMS</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <h1>Nairobi EMS</h1>
+        <p>Your Ultimate Emergency Service App</p>
+    </header>
+    <main>
+        <div class="emergency-button">
+            <button id="emergencyCallButton">Emergency Call</button>
+            <button id="panicButton">Panic Button</button>
+        </div>
+        <div id="mapContainer" class="map-container">
+            <p id="locationStatus">Tracking Location...</p>
+            <div id="map"></div>
+        </div>
+        <div class="medical-info">
+            <h2>Medical Information</h2>
+            <p><strong>Name:</strong> John Doe</p>
+            <p><strong>Allergies:</strong> Penicillin</p>
+            <!-- Add more medical information fields here -->
+        </div>
+        <div class="chat-support">
+            <h2>Chat Support</h2>
+            <div id="chatMessages"></div>
+            <input type="text" id="messageInput" placeholder="Type your message...">
+            <button id="sendButton">Send</button>
+        </div>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>

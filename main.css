@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    background-color: #3498db;
+    color: #fff;
+    padding: 1em 0;
+}
+
+main {
+    padding: 2em;
+}
+
+.emergency-button {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.map-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+}
+
+.medical-info {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 2em;
+}
+
+.chat-support {
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-top: 2em;
+}
+
+#chatMessages {
+    max-height: 200px;
+    overflow-y: scroll;
+    margin-bottom: 10px;
+}
+
+input[type="text"] {
+    padding: 8px;
+    width: 70%;
+}
+
+#sendButton {
+    padding: 8px 15px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
