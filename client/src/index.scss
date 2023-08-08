@@ -154,3 +154,34 @@
     }
 
 }
+
+// Mobile Responsiveness
+
+@media (max-width: 575.5px){
+    .hero-header{
+        .h5{
+            font-size: 16px !important;
+            margin: auto 0 !important;
+        }
+
+        .header-btn{
+            padding: 8px !important;
+        }
+    }
+    .hero-overlay{
+        background-color: #000;
+        opacity: 0.7;
+        z-index: 9;
+
+        .hero-info{
+            .h6{
+                font-size: 22px !important;
+                text-align: center;
+                padding: 3px !important;
+            }
+        }
+    }
+    .service-card{
+        margin-bottom: 10px;
+    }
+}
