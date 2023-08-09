@@ -28,7 +28,7 @@ class DistanceCalculator:
 
     @staticmethod
     def find_nearest_institution(emergency):
-        #feed emergency lat,long as parameter
+        #feed emergency as parameter
         #get list of institutions 
         institutions = Institution.objects.all()
         shortest_distance = None
