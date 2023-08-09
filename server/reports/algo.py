@@ -4,15 +4,15 @@ from django.db.models import Emergency, Institution
 
 class DistanceCalculator:
     @staticmethod
-    def calculate_distance(lat1, lon1, lat2, lon2):
+    def calculate_distance(emergencylat,emergencylon, instlat, instlon):
     # Radius of the Earth in kilometers
         Radius = 6371.0
 
         # defining variables for calculation
-        lat1_rad = radians(lat1)
-        lon1_rad = radians(lon1)
-        lat2_rad = radians(lat2)
-        lon2_rad = radians(lon2)
+        lat1_rad = radians(emergencylat)
+        lon1_rad = radians(emergencylon)
+        lat2_rad = radians(instlat)
+        lon2_rad = radians(instlon)
 
         dlon = lon2_rad - lon1_rad
         dlat = lat2_rad - lat1_rad
