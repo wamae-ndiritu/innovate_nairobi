@@ -1,4 +1,5 @@
 import React from "react";
+import Navbar from "./navbar/Navbar";
 
 const Hero = () => {
   return (
@@ -10,8 +11,7 @@ const Hero = () => {
         />
         <div className="hero-overlay">
           <div className="hero-header">
-            <h5 className="h5">Emergency Support</h5>
-            <button className="header-btn">Sign Up</button>
+            <Navbar />
           </div>
           <div className="hero-info">
             <p>Connecting Care, Saving Lives:</p>

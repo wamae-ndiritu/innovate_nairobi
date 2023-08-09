@@ -253,7 +253,6 @@
 // Incidencies Page
 .incidence-screen-wrapper{
     display: flex;
-    flex-wrap: wrap;
     gap: 20px;
 
     .incidence-filters{
@@ -354,6 +353,10 @@
         .photo-cont{
             flex: 100% !important;
         }
+    }
+
+    .incidence-screen-wrapper{
+        flex-wrap: wrap;
     }
 
     .incidence-filters{
