@@ -249,6 +249,67 @@
     }
 }
 
+
+// Incidencies Page
+.incidence-screen-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    .incidence-filters{
+        flex: 20%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+        padding: 0 10px;
+
+        .input{
+            input{
+                width: 70%;
+                padding: 10px;
+                border: 1px solid gray;
+                border-right: none;
+                border-radius: 10px 0 0 10px;
+
+                &:focus{
+                    outline: none;
+                }
+            }
+
+            button{
+                width: 30%;
+                border-left: none;
+                padding: 10px 0;
+                border: 1px solid gray;
+                border-radius: 0 10px 10px 0;
+                background-color: red;
+                color: #fff;
+            }
+        }
+
+        .h6{
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .time-sort{
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+
+            label{
+                margin: 5px 0;
+                font-size: 16px;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .incidence-list{
+        flex: 80%;
+    }
+}
+
 // Mobile Responsiveness
 
 @media (max-width: 575.5px){
@@ -293,5 +354,10 @@
         .photo-cont{
             flex: 100% !important;
         }
+    }
+
+    .incidence-filters{
+        flex: 100%;
+        padding: 0 20px;
     }
 }
