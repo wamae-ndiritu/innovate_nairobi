@@ -2,6 +2,47 @@ import React from "react";
 import Title from "./Title";
 
 const RecordIncidence = () => {
+  function previewImage(input) {
+    var preview = document.getElementById("image-preview");
+
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+
+      reader.onload = function (e) {
+        preview.src = e.target.result;
+      };
+
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+
+  // function uploadImage() {
+  //   var preview = document.getElementById("image-preview");
+
+  //   if (preview.src) {
+  //     // Here, you can implement your logic to upload the image to a cloud service
+  //     // For example, you can use fetch() to send the image data to an API endpoint
+  //     // Replace 'your-cloud-upload-url' with the actual URL for uploading
+  //     fetch("your-cloud-upload-url", {
+  //       method: "POST",
+  //       body: JSON.stringify({ image: preview.src }),
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //     })
+  //       .then((response) => response.json())
+  //       .then((data) => {
+  //         console.log("Image uploaded:", data);
+  //         // Handle success or other actions here
+  //       })
+  //       .catch((error) => {
+  //         console.error("Error uploading image:", error);
+  //         // Handle error or other actions here
+  //       });
+  //   } else {
+  //     console.log("No image to upload.");
+  //   }
+  // }
   return (
     <div className="container mt-5">
       <Title>Post an Incidence</Title>
@@ -28,9 +69,11 @@ const RecordIncidence = () => {
                 accept="image/*"
                 capture="camera"
                 className="d-none"
+                onChange={(e) => previewImage(e.target)}
               />
               <p>Take a photo or upload</p>
             </div>
+            <img id="image-preview" src="" alt="Preview" />
             <div className="incidence-details">
               <label htmlFor="loc">Location</label>
               <input type="text" className="form-control" id="loc" />
