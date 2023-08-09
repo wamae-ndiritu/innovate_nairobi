@@ -1,0 +1,26 @@
+.incident {
+  display: flex;
+  padding: 1rem;
+  border-radius: 1rem;
+  gap: 1rem;
+
+  img{
+    flex: 1;
+    max-height: 20rem;
+    object-fit: cover;
+    object-position: top right;
+    border-radius: 0.5rem;
+  }
+
+  .detail{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    p{
+      margin: 3px 0;
+    }
+  }
+}
+
