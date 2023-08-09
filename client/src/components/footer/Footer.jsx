@@ -4,13 +4,12 @@ import "./footer.css";
 
 const Footer = () => {
   return (
-    <footer className="app-footer">
+    <footer className="app-footer mt-5">
       <div className="footer-top">
         <div className="footer-logo">
-          <img src="logo192.png" alt="Emergency Service App Logo" />
+          <h4 className="h4">Emergency Support</h4>
         </div>
         <div className="footer-links">
-          <h3>Quick Links</h3>
           <ul>
             <li>
               <Link to="#">Home</Link>
