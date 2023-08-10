@@ -1,0 +1,32 @@
+.app-footer {
+  background-color: #d3bdbd;
+  padding: 0;
+  margin: 0;
+  height: 70px;
+}
+
+.footer-top {
+  display: flex;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.footer-logo h4 {
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 18px;
+}
+
+.footer-links ul {
+  display: flex;
+}
+
+.footer-links ul li a {
+  padding: 10px;
+  color: #000;
+}
+
+.footer-links ul li a:hover {
+  text-decoration: underline;
+}
