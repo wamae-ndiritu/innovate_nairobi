@@ -7,6 +7,7 @@ from rest_framework import status, viewsets
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.views import APIView
+from .call import VOICE
 
 from .models import Emergency, Emergency_Type, Institution
 from .serializers import (CreateEmergencySerializer,
@@ -63,21 +64,26 @@ class EmergencyType(APIView):
 
 class NearestInstitutionView(View):
     def get(self, request, emergency_type_id, *args, **kwargs):
-        # Retrieve the list of institutions
-        print(request)
-
+        # Declare Variables of shortest_distance and nearest_institution
         shortest_distance = None
         nearest_institution = None
 
-        # emergency = Emergency.objects.first()
-
+        # get emergency type
         type = emergency_type_id
-        print(type)
         institutions = Institution.objects.filter(type=type)
-        print(institutions)
 
-        emergencylat = float(request.GET.get('latitude'))
-        emergencylon = float(request.GET.get('longitude'))
+        # Emergency Location
+        if request.GET.get('latitude') is not None and request.GET.get('latitude') is not None:
+            emergencylat = float(request.GET.get('latitude'))
+            emergencylon = float(request.GET.get('longitude'))
+        else:
+            emergencylat = None
+            emergencylon = None
+
+        # Get User
+        user_id = request.GET.get('user')
+        user = User.objects.get(id=user_id)
+        number = user.profile.number
 
         if emergencylat is not None and emergencylon is not None:
             for institution in institutions:
@@ -120,10 +126,17 @@ class NearestInstitutionView(View):
                     'number': nearest_institution.number,
                 }
             }
+            call_to = nearest_institution.number
+            make_call = VOICE(call_to)
+            make_call.call()
+
         else:
+            institution_number = "+254791554834"
 
             response_data = {
-                'number': "079727393",
+                'number': institution_number,
             }
+
+            VOICE.call(self, institution_number)
 
         return JsonResponse(response_data)
